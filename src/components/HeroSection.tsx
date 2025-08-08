@@ -6,11 +6,11 @@ const HeroSection = () => {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-accent via-background to-primary/5 overflow-hidden pt-16">
       {/* Background decorative elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-secondary/20 rounded-full blur-xl animate-bounce-gentle"></div>
-      <div className="absolute bottom-32 right-16 w-16 h-16 bg-primary/20 rounded-full blur-lg animate-bounce-gentle"></div>
+      <div className="absolute top-20 left-10 w-16 h-16 bg-secondary/20 rounded-full blur-xl animate-bounce-gentle"></div>
+      <div className="absolute bottom-20 right-10 w-12 h-12 bg-primary/20 rounded-full blur-lg animate-bounce-gentle"></div>
       
-      <div className="container mx-auto px-4 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid lg:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
           {/* Content - Always on top on mobile */}
           <div className="order-1 lg:order-1">
             <div className="space-y-8 animate-fade-in">
@@ -64,8 +64,8 @@ const HeroSection = () => {
           </div>
           
           {/* Hero Image - Below content on mobile */}
-          <div className="order-2 lg:order-2 relative animate-slide-up">
-            <div className="relative z-10 bg-white rounded-3xl shadow-glow overflow-hidden">
+          <div className="order-2 lg:order-2 relative animate-slide-up lg:pl-8">
+            <div className="relative z-10 bg-white rounded-2xl shadow-card overflow-hidden max-w-lg mx-auto lg:mx-0">
               <img 
                 src={heroImage} 
                 alt="Students learning coding and technology" 
@@ -73,13 +73,13 @@ const HeroSection = () => {
               />
             </div>
             
-            {/* Floating cards */}
-            <div className="absolute -top-6 -left-6 bg-primary text-primary-foreground p-4 rounded-2xl shadow-card animate-bounce-gentle">
-              <Code className="w-8 h-8" />
+            {/* Floating cards - Hidden on mobile to prevent overlap */}
+            <div className="hidden lg:block absolute -top-4 -left-4 bg-primary text-primary-foreground p-3 rounded-xl shadow-card animate-bounce-gentle">
+              <Code className="w-6 h-6" />
             </div>
             
-            <div className="absolute -bottom-6 -right-6 bg-secondary text-secondary-foreground p-4 rounded-2xl shadow-card animate-bounce-gentle" style={{animationDelay: '0.5s'}}>
-              <Users className="w-8 h-8" />
+            <div className="hidden lg:block absolute -bottom-4 -right-4 bg-secondary text-secondary-foreground p-3 rounded-xl shadow-card animate-bounce-gentle" style={{animationDelay: '0.5s'}}>
+              <Users className="w-6 h-6" />
             </div>
           </div>
         </div>
