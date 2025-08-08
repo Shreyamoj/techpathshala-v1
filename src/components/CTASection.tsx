@@ -3,7 +3,7 @@ import { ArrowRight, MessageCircle, Phone, Calendar, Users } from "lucide-react"
 
 const CTASection = () => {
   return (
-    <section className="py-20 bg-background relative overflow-hidden">
+    <section id="contact" className="py-20 bg-background relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10"></div>
       <div className="absolute top-10 left-10 w-32 h-32 bg-primary/5 rounded-full blur-2xl"></div>

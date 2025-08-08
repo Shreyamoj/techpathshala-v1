@@ -41,7 +41,7 @@ const classes = [
 
 const ClassSection = () => {
   return (
-    <section className="py-20 bg-background relative overflow-hidden">
+    <section id="classes" className="py-20 bg-background relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5"></div>
       
@@ -64,27 +64,27 @@ const ClassSection = () => {
                 className="group relative animate-slide-up"
                 style={{animationDelay: `${index * 0.1}s`}}
               >
-                <div className="bg-card rounded-3xl p-6 shadow-card hover:shadow-glow transition-all duration-300 hover:-translate-y-2 border border-border/50">
+                <div className="h-full bg-card rounded-3xl p-6 shadow-card hover:shadow-glow transition-all duration-300 hover:-translate-y-2 border border-border/50 flex flex-col">
                   {/* Icon */}
                   <div className={`w-16 h-16 ${item.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
                   
                   {/* Content */}
-                  <div className="space-y-4">
-                    <div>
-                      <h3 className="text-xl font-bold text-foreground mb-2">
+                  <div className="space-y-4 flex-1 flex flex-col">
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-foreground mb-3">
                         {item.class}
                       </h3>
-                      <p className="text-sm font-medium text-primary mb-2">
+                      <p className="text-sm font-medium text-primary mb-3">
                         {item.skills}
                       </p>
-                      <p className="text-xs text-muted-foreground leading-relaxed">
+                      <p className="text-sm text-muted-foreground leading-relaxed">
                         {item.description}
                       </p>
                     </div>
                     
-                    <Button variant="class" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground">
+                    <Button variant="class" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground mt-auto">
                       View Curriculum
                     </Button>
                   </div>

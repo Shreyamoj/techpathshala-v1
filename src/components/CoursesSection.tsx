@@ -50,7 +50,7 @@ const courses = [
 
 const CoursesSection = () => {
   return (
-    <section className="py-20 bg-accent/30 relative overflow-hidden">
+    <section id="courses" className="py-20 bg-accent/30 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
@@ -74,7 +74,7 @@ const CoursesSection = () => {
                 className="group w-80 lg:w-full animate-slide-up"
                 style={{animationDelay: `${index * 0.1}s`}}
               >
-                <div className="bg-card rounded-3xl overflow-hidden shadow-card hover:shadow-glow transition-all duration-300 hover:-translate-y-2 border border-border/50">
+                <div className="h-full bg-card rounded-3xl overflow-hidden shadow-card hover:shadow-glow transition-all duration-300 hover:-translate-y-2 border border-border/50 flex flex-col">
                   {/* Course Image */}
                   <div className="relative h-48 overflow-hidden">
                     <img 
@@ -92,12 +92,12 @@ const CoursesSection = () => {
                   </div>
                   
                   {/* Course Content */}
-                  <div className="p-6 space-y-4">
-                    <div>
-                      <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                  <div className="p-6 space-y-4 flex-1 flex flex-col">
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
                         {course.title}
                       </h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                         {course.description}
                       </p>
                     </div>
@@ -129,7 +129,7 @@ const CoursesSection = () => {
                       </div>
                     </div>
                     
-                    <Button className="w-full group-hover:bg-primary group-hover:text-primary-foreground">
+                    <Button className="w-full group-hover:bg-primary group-hover:text-primary-foreground mt-auto">
                       Start Learning
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
