@@ -9,8 +9,8 @@ const HeroSection = () => {
       <div className="absolute top-20 left-10 w-16 h-16 bg-secondary/20 rounded-full blur-xl animate-bounce-gentle"></div>
       <div className="absolute bottom-20 right-10 w-12 h-12 bg-primary/20 rounded-full blur-lg animate-bounce-gentle"></div>
       
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid lg:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
           {/* Content - Always on top on mobile */}
           <div className="order-1 lg:order-1">
             <div className="space-y-8 animate-fade-in">

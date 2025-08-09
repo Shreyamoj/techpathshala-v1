@@ -36,7 +36,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="py-20 bg-background relative overflow-hidden">
+    <section id="faq" className="py-16 bg-background relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-br from-accent/50 via-transparent to-primary/5"></div>
       

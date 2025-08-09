@@ -41,7 +41,7 @@ const classes = [
 
 const ClassSection = () => {
   return (
-    <section id="classes" className="py-20 bg-background relative overflow-hidden">
+    <section id="classes" className="py-16 bg-background relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5"></div>
       

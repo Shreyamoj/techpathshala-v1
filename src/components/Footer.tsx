@@ -1,5 +1,6 @@
 import { Facebook, Twitter, Instagram, Youtube, Mail, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -42,35 +43,35 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-background">Quick Links</h4>
             <div className="space-y-2">
-              <button
-                onClick={() => scrollToSection('hero')}
+              <Link
+                to="/"
                 className="block text-background/80 hover:text-primary transition-colors text-sm"
               >
                 Home
-              </button>
-              <button
-                onClick={() => scrollToSection('courses')}
+              </Link>
+              <Link
+                to="/courses"
                 className="block text-background/80 hover:text-primary transition-colors text-sm"
               >
                 Courses
-              </button>
-              <button
-                onClick={() => scrollToSection('why-us')}
+              </Link>
+              <Link
+                to="/about"
                 className="block text-background/80 hover:text-primary transition-colors text-sm"
               >
-                Why Learn with Us?
-              </button>
-              <button
-                onClick={() => scrollToSection('testimonials')}
+                About Us
+              </Link>
+              <Link
+                to="/contact"
                 className="block text-background/80 hover:text-primary transition-colors text-sm"
               >
-                Testimonials
-              </button>
+                Contact
+              </Link>
               <button
-                onClick={() => scrollToSection('contact')}
+                onClick={() => scrollToSection('faq')}
                 className="block text-background/80 hover:text-primary transition-colors text-sm"
               >
-                Contact Us
+                FAQ
               </button>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,30 +30,30 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <button 
-                onClick={() => scrollToSection('hero')}
+              <Link 
+                to="/"
                 className="text-foreground hover:text-primary transition-colors font-medium"
               >
                 Home
-              </button>
-              <button 
-                onClick={() => scrollToSection('courses')}
+              </Link>
+              <Link 
+                to="/courses"
                 className="text-foreground hover:text-primary transition-colors font-medium"
               >
                 Courses
-              </button>
-              <button 
-                onClick={() => scrollToSection('why-us')}
+              </Link>
+              <Link 
+                to="/about"
                 className="text-foreground hover:text-primary transition-colors font-medium"
               >
-                Why Us?
-              </button>
-              <button 
-                onClick={() => scrollToSection('contact')}
+                About
+              </Link>
+              <Link 
+                to="/contact"
                 className="text-foreground hover:text-primary transition-colors font-medium"
               >
                 Contact
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -83,30 +84,34 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-background border-t border-border/50">
-              <button
-                onClick={() => scrollToSection('hero')}
+              <Link
+                to="/"
+                onClick={() => setIsMenuOpen(false)}
                 className="block w-full text-left px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors"
               >
                 Home
-              </button>
-              <button
-                onClick={() => scrollToSection('courses')}
+              </Link>
+              <Link
+                to="/courses"
+                onClick={() => setIsMenuOpen(false)}
                 className="block w-full text-left px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors"
               >
                 Courses
-              </button>
-              <button
-                onClick={() => scrollToSection('why-us')}
+              </Link>
+              <Link
+                to="/about"
+                onClick={() => setIsMenuOpen(false)}
                 className="block w-full text-left px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors"
               >
-                Why Us?
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
+                About
+              </Link>
+              <Link
+                to="/contact"
+                onClick={() => setIsMenuOpen(false)}
                 className="block w-full text-left px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors"
               >
                 Contact
-              </button>
+              </Link>
               <div className="px-3 py-2">
                 <Button variant="hero" size="sm" className="w-full">
                   Join Now

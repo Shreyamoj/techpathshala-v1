@@ -41,7 +41,7 @@ const features = [
 
 const WhyLearnSection = () => {
   return (
-    <section id="why-us" className="py-20 bg-background relative overflow-hidden">
+    <section id="why-us" className="py-16 bg-background relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"></div>
       
