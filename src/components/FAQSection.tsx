@@ -92,14 +92,14 @@ const FAQSection = () => {
           <p className="text-muted-foreground mb-4">
             Still have questions? Our team is here to help!
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="inline-flex items-center justify-center px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-lg font-medium transition-colors">
-              WhatsApp Us
-            </button>
-            <button className="inline-flex items-center justify-center px-6 py-3 border border-border bg-card hover:bg-accent text-foreground rounded-lg font-medium transition-colors">
-              Schedule a Call
-            </button>
-          </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="https://wa.me/919876543210?text=Hi%20TechPathshala%20team%2C%20I%20have%20a%20question." target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-lg font-medium transition-colors">
+                WhatsApp Us
+              </a>
+              <a href="tel:+919876543210" className="inline-flex items-center justify-center px-6 py-3 border border-border bg-card hover:bg-accent text-foreground rounded-lg font-medium transition-colors">
+                Schedule a Call
+              </a>
+            </div>
         </div>
       </div>
     </section>

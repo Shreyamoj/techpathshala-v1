@@ -35,14 +35,18 @@ const HeroSection = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="hero" size="xl" className="group">
-                  Explore Courses
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <Button asChild variant="hero" size="xl" className="group">
+                  <a href="/courses">
+                    Explore Courses
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </a>
                 </Button>
                 
-                <Button variant="outline" size="xl" className="bg-white/80 backdrop-blur-sm">
-                  <Users className="w-5 h-5" />
-                  Join Community
+                <Button asChild variant="outline" size="xl" className="bg-white/80 backdrop-blur-sm">
+                  <a href="/contact">
+                    <Users className="w-5 h-5" />
+                    Join Community
+                  </a>
                 </Button>
               </div>
               

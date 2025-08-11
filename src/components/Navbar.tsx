@@ -43,6 +43,12 @@ const Navbar = () => {
                 Courses
               </Link>
               <Link 
+                to="/#why-us"
+                className="text-foreground hover:text-primary transition-colors font-medium"
+              >
+                Why Us?
+              </Link>
+              <Link 
                 to="/about"
                 className="text-foreground hover:text-primary transition-colors font-medium"
               >
@@ -59,9 +65,11 @@ const Navbar = () => {
 
           {/* Desktop CTA Button */}
           <div className="hidden md:block">
-            <Button variant="hero" size="sm">
-              Join Now
-              <ArrowRight className="w-4 h-4" />
+            <Button asChild variant="hero" size="sm">
+              <Link to="/contact">
+                Join Now
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </Button>
           </div>
 
@@ -99,6 +107,13 @@ const Navbar = () => {
                 Courses
               </Link>
               <Link
+                to="/#why-us"
+                onClick={() => setIsMenuOpen(false)}
+                className="block w-full text-left px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors"
+              >
+                Why Us?
+              </Link>
+              <Link
                 to="/about"
                 onClick={() => setIsMenuOpen(false)}
                 className="block w-full text-left px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors"
@@ -113,9 +128,11 @@ const Navbar = () => {
                 Contact
               </Link>
               <div className="px-3 py-2">
-                <Button variant="hero" size="sm" className="w-full">
-                  Join Now
-                  <ArrowRight className="w-4 h-4" />
+                <Button asChild variant="hero" size="sm" className="w-full">
+                  <Link to="/contact">
+                    Join Now
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
                 </Button>
               </div>
             </div>

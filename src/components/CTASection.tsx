@@ -20,14 +20,18 @@ const CTASection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button variant="hero" size="xl" className="text-lg px-12 py-4 h-auto">
-              Join the First Batch Now
-              <ArrowRight className="w-6 h-6" />
+            <Button asChild variant="hero" size="xl" className="text-lg px-12 py-4 h-auto">
+              <a href="/contact">
+                Join the First Batch Now
+                <ArrowRight className="w-6 h-6" />
+              </a>
             </Button>
             
-            <Button variant="outline" size="xl" className="text-lg px-8 py-4 h-auto bg-white/80 backdrop-blur-sm">
-              <Calendar className="w-5 h-5" />
-              Book Free Demo Class
+            <Button asChild variant="outline" size="xl" className="text-lg px-8 py-4 h-auto bg-white/80 backdrop-blur-sm">
+              <a href="/contact#demo">
+                <Calendar className="w-5 h-5" />
+                Book Free Demo Class
+              </a>
             </Button>
           </div>
           
@@ -57,9 +61,11 @@ const CTASection = () => {
                 <p className="text-muted-foreground">
                   Get instant answers to your questions and course details
                 </p>
-                <Button className="w-full bg-green-500 hover:bg-green-600 text-white">
-                  <MessageCircle className="w-5 h-5" />
-                  Chat on WhatsApp
+                <Button asChild className="w-full bg-green-500 hover:bg-green-600 text-white">
+                  <a href="https://wa.me/919876543210?text=Hi%20TechPathshala%20team%2C%20I%27d%20like%20to%20know%20more%20about%20your%20courses." target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="w-5 h-5" />
+                    Chat on WhatsApp
+                  </a>
                 </Button>
                 <p className="text-xs text-muted-foreground">
                   Available 9 AM - 8 PM, Monday to Saturday
@@ -77,9 +83,11 @@ const CTASection = () => {
                 <p className="text-muted-foreground">
                   Speak directly with our education counselors
                 </p>
-                <Button variant="outline" className="w-full">
-                  <Phone className="w-5 h-5" />
-                  +91 98765 43210
+                <Button asChild variant="outline" className="w-full">
+                  <a href="tel:+919876543210">
+                    <Phone className="w-5 h-5" />
+                    +91 98765 43210
+                  </a>
                 </Button>
                 <p className="text-xs text-muted-foreground">
                   Free counseling and course guidance

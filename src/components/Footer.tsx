@@ -67,12 +67,12 @@ const Footer = () => {
               >
                 Contact
               </Link>
-              <button
-                onClick={() => scrollToSection('faq')}
+              <Link
+                to="/#faq"
                 className="block text-background/80 hover:text-primary transition-colors text-sm"
               >
                 FAQ
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -80,18 +80,18 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-background">Popular Courses</h4>
             <div className="space-y-2 text-sm">
-              <a href="#" className="block text-background/80 hover:text-secondary transition-colors">
+              <Link to="/courses" className="block text-background/80 hover:text-secondary transition-colors">
                 Python with Fun Projects
-              </a>
-              <a href="#" className="block text-background/80 hover:text-secondary transition-colors">
+              </Link>
+              <Link to="/courses" className="block text-background/80 hover:text-secondary transition-colors">
                 HTML, CSS & Website Building
-              </a>
-              <a href="#" className="block text-background/80 hover:text-secondary transition-colors">
+              </Link>
+              <Link to="/courses" className="block text-background/80 hover:text-secondary transition-colors">
                 Data Analysis for Beginners
-              </a>
-              <a href="#" className="block text-background/80 hover:text-secondary transition-colors">
+              </Link>
+              <Link to="/courses" className="block text-background/80 hover:text-secondary transition-colors">
                 Excel + Graphs for School
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -116,8 +116,8 @@ const Footer = () => {
               <p className="text-sm text-background/80">
                 Get updates on new courses and tech tips!
               </p>
-              <Button variant="outline" size="sm" className="w-full bg-transparent border-background/30 text-background hover:bg-background/10">
-                Subscribe to Newsletter
+              <Button asChild variant="outline" size="sm" className="w-full bg-transparent border-background/30 text-background hover:bg-background/10">
+                <Link to="/contact">Subscribe to Newsletter</Link>
               </Button>
             </div>
           </div>
@@ -130,15 +130,15 @@ const Footer = () => {
               © 2025 TechPathshala. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-background/60 hover:text-primary transition-colors">
+              <Link to="/about" className="text-background/60 hover:text-primary transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-background/60 hover:text-primary transition-colors">
+              </Link>
+              <Link to="/about" className="text-background/60 hover:text-primary transition-colors">
                 Terms of Service
-              </a>
-              <a href="#" className="text-background/60 hover:text-primary transition-colors">
+              </Link>
+              <Link to="/about" className="text-background/60 hover:text-primary transition-colors">
                 Refund Policy
-              </a>
+              </Link>
             </div>
           </div>
         </div>

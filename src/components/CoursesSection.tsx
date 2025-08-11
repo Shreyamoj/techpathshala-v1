@@ -129,9 +129,11 @@ const CoursesSection = () => {
                       </div>
                     </div>
                     
-                    <Button className="w-full group-hover:bg-primary group-hover:text-primary-foreground mt-auto">
-                      Start Learning
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <Button asChild className="w-full group-hover:bg-primary group-hover:text-primary-foreground mt-auto">
+                      <a href="/contact">
+                        Start Learning
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </a>
                     </Button>
                   </div>
                 </div>
@@ -141,9 +143,11 @@ const CoursesSection = () => {
         </div>
         
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg">
-            View All Courses
-            <ArrowRight className="w-5 h-5" />
+          <Button asChild variant="outline" size="lg">
+            <a href="/courses">
+              View All Courses
+              <ArrowRight className="w-5 h-5" />
+            </a>
           </Button>
         </div>
       </div>

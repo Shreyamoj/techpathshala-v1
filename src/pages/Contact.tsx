@@ -135,7 +135,7 @@ const Contact = () => {
                   </p>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form onSubmit={handleSubmit} className="space-y-6" id="contact-form">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium mb-2">
@@ -272,7 +272,19 @@ const Contact = () => {
                               <h4 className="font-semibold mb-1">{action.title}</h4>
                               <p className="text-sm text-muted-foreground">{action.description}</p>
                             </div>
-                            <Button variant={action.variant} size="sm">
+                            <Button
+                              variant={action.variant}
+                              size="sm"
+                              onClick={() => {
+                                if (index === 0) {
+                                  document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
+                                } else if (index === 1) {
+                                  window.open('https://wa.me/919876543210?text=Hi%20TechPathshala%20team%2C%20I%20want%20to%20chat%20about%20your%20courses.', '_blank', 'noopener');
+                                } else if (index === 2) {
+                                  window.location.href = 'tel:+919876543210';
+                                }
+                              }}
+                            >
                               {action.action}
                             </Button>
                           </div>
@@ -344,8 +356,10 @@ const Contact = () => {
                   <p className="text-muted-foreground">
                     123 Tech Street, Kolkata, West Bengal - 700001
                   </p>
-                  <Button className="mt-4">
-                    Open in Google Maps
+                  <Button asChild className="mt-4">
+                    <a href="https://www.google.com/maps/search/?api=1&query=123+Tech+Street+Kolkata+West+Bengal+700001" target="_blank" rel="noopener noreferrer">
+                      Open in Google Maps
+                    </a>
                   </Button>
                 </div>
               </div>

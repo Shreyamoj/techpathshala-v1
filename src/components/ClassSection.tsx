@@ -84,8 +84,8 @@ const ClassSection = () => {
                       </p>
                     </div>
                     
-                    <Button variant="class" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground mt-auto">
-                      View Curriculum
+                    <Button asChild variant="class" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground mt-auto">
+                      <a href="/courses">View Curriculum</a>
                     </Button>
                   </div>
                 </div>
@@ -98,9 +98,11 @@ const ClassSection = () => {
           <p className="text-muted-foreground mb-4">
             Not sure which class to pick? Take our quick assessment!
           </p>
-          <Button variant="outline" size="lg">
-            <Calculator className="w-5 h-5" />
-            Find My Level
+          <Button asChild variant="outline" size="lg">
+            <a href="/contact">
+              <Calculator className="w-5 h-5" />
+              Find My Level
+            </a>
           </Button>
         </div>
       </div>
