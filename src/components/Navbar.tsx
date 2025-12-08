@@ -29,46 +29,47 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-10 flex items-baseline space-x-6">
               <Link 
                 to="/"
                 className="text-foreground hover:text-primary transition-colors font-medium"
               >
                 Home
               </Link>
+              <a 
+                href="/#free-videos"
+                className="text-foreground hover:text-primary transition-colors font-medium flex items-center gap-1"
+              >
+                <span className="text-green-500 text-xs">●</span>
+                Free Videos
+              </a>
               <Link 
                 to="/courses"
                 className="text-foreground hover:text-primary transition-colors font-medium"
               >
                 Courses
               </Link>
-              <Link 
-                to="/#why-us"
+              <a 
+                href="/#live-classes"
                 className="text-foreground hover:text-primary transition-colors font-medium"
               >
-                Why Us?
-              </Link>
+                Live Class
+              </a>
               <Link 
                 to="/about"
                 className="text-foreground hover:text-primary transition-colors font-medium"
               >
                 About
               </Link>
-              <Link 
-                to="/contact"
-                className="text-foreground hover:text-primary transition-colors font-medium"
-              >
-                Contact
-              </Link>
             </div>
           </div>
 
           {/* Desktop CTA Button */}
           <div className="hidden md:block">
-            <Button asChild variant="hero" size="sm">
+            <Button asChild size="sm" className="bg-green-500 hover:bg-green-600 text-white">
               <Link to="/contact">
-                Join Now
-                <ArrowRight className="w-4 h-4" />
+                Book Demo
+                <ArrowRight className="w-4 h-4 ml-1" />
               </Link>
             </Button>
           </div>
@@ -99,6 +100,14 @@ const Navbar = () => {
               >
                 Home
               </Link>
+              <a
+                href="/#free-videos"
+                onClick={() => setIsMenuOpen(false)}
+                className="flex items-center gap-2 w-full text-left px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors"
+              >
+                <span className="text-green-500 text-xs">●</span>
+                Free Videos
+              </a>
               <Link
                 to="/courses"
                 onClick={() => setIsMenuOpen(false)}
@@ -106,13 +115,13 @@ const Navbar = () => {
               >
                 Courses
               </Link>
-              <Link
-                to="/#why-us"
+              <a
+                href="/#live-classes"
                 onClick={() => setIsMenuOpen(false)}
                 className="block w-full text-left px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors"
               >
-                Why Us?
-              </Link>
+                Live Class
+              </a>
               <Link
                 to="/about"
                 onClick={() => setIsMenuOpen(false)}
@@ -120,18 +129,11 @@ const Navbar = () => {
               >
                 About
               </Link>
-              <Link
-                to="/contact"
-                onClick={() => setIsMenuOpen(false)}
-                className="block w-full text-left px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors"
-              >
-                Contact
-              </Link>
               <div className="px-3 py-2">
-                <Button asChild variant="hero" size="sm" className="w-full">
+                <Button asChild size="sm" className="w-full bg-green-500 hover:bg-green-600 text-white">
                   <Link to="/contact">
-                    Join Now
-                    <ArrowRight className="w-4 h-4" />
+                    Book Demo Class
+                    <ArrowRight className="w-4 h-4 ml-1" />
                   </Link>
                 </Button>
               </div>
