@@ -3,10 +3,11 @@ import { useLocation } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import ScrollProgress from "@/components/ScrollProgress";
 import HeroSection from "@/components/HeroSection";
-import ClassSection from "@/components/ClassSection";
+import FreeCoursesSection from "@/components/FreeCoursesSection";
+import LiveClassesPromo from "@/components/LiveClassesPromo";
+import StudentSuccessStories from "@/components/StudentSuccessStories";
 import CoursesSection from "@/components/CoursesSection";
 import WhyLearnSection from "@/components/WhyLearnSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
@@ -25,14 +26,15 @@ const Index = () => {
   }, [hash]);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <ScrollProgress />
       <Navbar />
       <HeroSection />
-      <ClassSection />
+      <FreeCoursesSection />
+      <LiveClassesPromo />
+      <StudentSuccessStories />
       <CoursesSection />
       <WhyLearnSection />
-      <TestimonialsSection />
       <FAQSection />
       <CTASection />
       <Footer />
