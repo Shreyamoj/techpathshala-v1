@@ -3,7 +3,8 @@ import { useLocation } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import ScrollProgress from "@/components/ScrollProgress";
 import HeroSection from "@/components/HeroSection";
-import FreeCoursesSection from "@/components/FreeCoursesSection";
+import StarterCoursesSection from "@/components/FreeCoursesSection";
+import AILearningSection from "@/components/AILearningSection";
 import LiveClassesPromo from "@/components/LiveClassesPromo";
 import StudentSuccessStories from "@/components/StudentSuccessStories";
 import CoursesSection from "@/components/CoursesSection";
@@ -30,7 +31,8 @@ const Index = () => {
       <ScrollProgress />
       <Navbar />
       <HeroSection />
-      <FreeCoursesSection />
+      <StarterCoursesSection />
+      <AILearningSection />
       <LiveClassesPromo />
       <StudentSuccessStories />
       <CoursesSection />
