@@ -4,19 +4,20 @@ import { Badge } from "@/components/ui/badge";
 import { Play, Clock, BookOpen, Lock, Globe, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 
-// Free video lessons - mixed from different courses
-const freeVideos = [
+// Starter video lessons - mixed from different courses
+const starterVideos = [
   {
     id: 1,
     title: "Python কি? কেন শিখবে?",
     titleEn: "What is Python & Why Learn It?",
     duration: "12 min",
-    course: "Python",
+    course: "Python + AI",
     thumbnail: "/placeholder.svg",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     language: "bn",
     views: "2.5K",
-    isFree: true
+    isStarter: true,
+    hasAI: true
   },
   {
     id: 2,
@@ -28,31 +29,34 @@ const freeVideos = [
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     language: "bn",
     views: "3.1K",
-    isFree: true
+    isStarter: true,
+    hasAI: false
   },
   {
     id: 3,
-    title: "Excel এ Formula শেখো",
-    titleEn: "Learn Excel Formulas",
+    title: "AI দিয়ে Excel শেখো",
+    titleEn: "Learn Excel with AI",
     duration: "18 min",
-    course: "Excel",
+    course: "Excel + AI",
     thumbnail: "/placeholder.svg",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     language: "bn",
     views: "1.8K",
-    isFree: true
+    isStarter: true,
+    hasAI: true
   },
   {
     id: 4,
-    title: "Variables & Data Types",
-    titleEn: "Variables & Data Types",
+    title: "ChatGPT for Coding",
+    titleEn: "ChatGPT for Coding",
     duration: "20 min",
-    course: "Python",
+    course: "AI Tools",
     thumbnail: "/placeholder.svg",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     language: "en",
     views: "4.2K",
-    isFree: true
+    isStarter: true,
+    hasAI: true
   },
   {
     id: 5,
@@ -64,23 +68,25 @@ const freeVideos = [
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     language: "bn",
     views: "2.9K",
-    isFree: true
+    isStarter: true,
+    hasAI: false
   },
   {
     id: 6,
-    title: "Data দিয়ে Chart বানাও",
-    titleEn: "Create Charts from Data",
+    title: "AI দিয়ে Data Analysis",
+    titleEn: "Data Analysis with AI",
     duration: "16 min",
-    course: "Data Analysis",
+    course: "Data + AI",
     thumbnail: "/placeholder.svg",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     language: "bn",
     views: "1.5K",
-    isFree: true
+    isStarter: true,
+    hasAI: true
   }
 ];
 
-const VideoCard = ({ video, onPlay }: { video: typeof freeVideos[0]; onPlay: () => void }) => {
+const VideoCard = ({ video, onPlay }: { video: typeof starterVideos[0]; onPlay: () => void }) => {
   return (
     <div 
       className="group bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-glow transition-all duration-300 hover:-translate-y-1 border border-border/50 cursor-pointer"
@@ -98,9 +104,14 @@ const VideoCard = ({ video, onPlay }: { video: typeof freeVideos[0]; onPlay: () 
             <Play className="w-6 h-6 text-primary-foreground ml-1" fill="currentColor" />
           </div>
         </div>
-        <Badge className="absolute top-3 left-3 bg-green-500 text-white">
-          ফ্রি / Free
+        <Badge className="absolute top-3 left-3 bg-gradient-to-r from-primary to-secondary text-white">
+          🎯 Starter
         </Badge>
+        {video.hasAI && (
+          <Badge className="absolute top-3 left-20 bg-purple-500 text-white">
+            ✨ AI
+          </Badge>
+        )}
         <div className="absolute bottom-3 right-3 bg-foreground/80 text-background px-2 py-1 rounded text-xs font-medium flex items-center gap-1">
           <Clock className="w-3 h-3" />
           {video.duration}
@@ -128,31 +139,31 @@ const VideoCard = ({ video, onPlay }: { video: typeof freeVideos[0]; onPlay: () 
   );
 };
 
-const FreeCoursesSection = () => {
-  const [playingVideo, setPlayingVideo] = useState<typeof freeVideos[0] | null>(null);
+const StarterCoursesSection = () => {
+  const [playingVideo, setPlayingVideo] = useState<typeof starterVideos[0] | null>(null);
   const [language, setLanguage] = useState<"all" | "bn" | "en">("all");
 
-  const filteredVideos = freeVideos.filter(v => 
+  const filteredVideos = starterVideos.filter(v => 
     language === "all" || v.language === language
   );
 
   return (
-    <section id="free-videos" className="py-16 bg-background relative overflow-hidden">
+    <section id="starter-videos" className="py-16 bg-background relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-1/2 left-0 w-64 h-64 bg-green-500/10 rounded-full blur-3xl -translate-y-1/2"></div>
+      <div className="absolute top-1/2 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -translate-y-1/2"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-10">
-          <Badge className="bg-green-500/20 text-green-700 mb-4 text-sm px-4 py-1">
-            🎁 সম্পূর্ণ বিনামূল্যে / Completely Free
+          <Badge className="bg-primary/20 text-primary mb-4 text-sm px-4 py-1">
+            🚀 Start Your Journey | তোমার যাত্রা শুরু করো
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            ফ্রি ভিডিও <span className="gradient-text">Lessons</span>
+            Starter <span className="gradient-text">Lessons</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
-            বাংলা ও ইংরেজিতে শেখো, যখন ইচ্ছা, যেখান থেকে ইচ্ছা। কোনো টাকা লাগবে না!
+            বাংলা ও ইংরেজিতে শেখো, যখন ইচ্ছা, যেখান থেকে ইচ্ছা। AI দিয়ে আরো সহজে!
             <br />
-            <span className="text-sm">Learn in Bengali & English, anytime, anywhere. No cost!</span>
+            <span className="text-sm">Learn in Bengali & English with AI-powered assistance!</span>
           </p>
           
           {/* Language Filter */}
@@ -256,4 +267,4 @@ const FreeCoursesSection = () => {
   );
 };
 
-export default FreeCoursesSection;
+export default StarterCoursesSection;
